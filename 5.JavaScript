@@ -181,3 +181,23 @@ Web処理の制御（コントローラー）--役割--データの保持・操�
 ブラウザから直接リクエストされる---------他のクラスから呼び出される
 URLごとの処理分岐、リクエスト受け取り----DBデータの保持、フォーム入力の受け渡し
 doGet, doPost 必須------------------getter, setter を持つ、引数なしコンストラクターあり
+
+-----------
+データベース
+-----------
+
+request.setCharacterEncoding("utf-8");
+	//フォームからの送信などリクエストをutf-8で正しく受け取るためのおまじない
+int num=Integer.parseInt(request.getParameter("num"));
+	//フォームから送られてきたnumの値を受け取る
+int mode=Integer.parseInt(request.getParameter("mode"));
+
+InitialContext ic=new InitialContext(); 
+DataSource ds=(DataSource)ic.lookup("java:comp/env/mariadb");
+	//データベースに接続するための準備。JavaアプリからDBへ接続できるようにする
+Connection con=ds.getConnection();	//実際にデータベースと接続
+String sql="SELECT * FROM bbs WHERE bbd_id=" +num;
+	//上記のSQL文をデータベースに送るための実行クラス
+PreparedStatement pst=con.prepareStatement(sql);
+	//SQLを実行したその結果を rs に代入
+ResultSet rs=pst.executeQuery();
