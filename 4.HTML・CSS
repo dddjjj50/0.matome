@@ -1,1 +1,112 @@
+=======================
+HTML・CSS 共通のデザイン
+=======================
 
+
+
+
+
+
+=======================
+HTML
+=======================
+
+■名前をつけてCSSと連動させたいとき。
+<>の中に　="任意の名前"　を入れる。
+
+■タグたち
+div　ブロック全体をまとめるコンテナ
+├ p　文章の段落
+└ img　
+
+■コメント
+<!-- ソースには表示される -->
+
+■テーブル
+・構造
+table
+⎿tr 横の行
+  ⎿(th) ちょっと目立たせたいとき。必須じゃない。
+    ⎿td ひとつひとつの部屋
+・テーブルを入れ子にすることもできる。
+
+
+
+
+=======================
+CSS
+=======================
+
+■CSSを使いたいときはHTMLソースのヘッダに
+<link rel="stylesheet" type="text/css" href="ここを該当のCSSファイルのURLにする">
+link rel="stylesheet" type="text/css"の部分は変えなくていい
+
+■CSSの最初は、これだけ。
+@charset "UTF-8";
+
+■ドット「.」の有無
+・<table>や<div>などもともとHTMLソースで使われるものにはいらない。
+・<タグ>の中で「class=""」って名付けたものには「.」つける。
+
+■色まわり
+・背景色　background:;
+・文字色　color:;
+
+■文字まわり
+・文字色　color:;
+・文字サイズ　font-size: 20px;
+・太文字　font-weight:bold;
+    -normal 標準の太さ。数値で400を指定したときと同じ太さ
+    -bold 太字。数値でいうと700
+    -lighter 親要素と比較して一段細くする。親要素が400なら300に
+    -bolder 親要素と比較して一段階太くする。親要素が400なら500に
+
+■配置
+・文字だけの配置指定　text-align: center;
+・要素の内側の余白　padding　％もpxもOK、autoで真ん中
+・要素の外側の余白　margin　％もpxもOK、autoで真ん中
+
+・上だけ指定⇒ margin-top、padding-top
+　下だけ指定⇒ margin-bottom、padding-bottom
+　左だけ指定⇒ margin-left、padding-left
+　右だけ指定⇒ margin-right、padding-right
+
+■中央揃えとmargin:auto;
+・ただmargin:auto;じゃだめ
+1.幅（width）とセット
+  margin: auto;
+  width: 300px;
+2.左右だけ auto にしたいなら
+  margin-left: auto;
+　margin-right: auto;
+3.0auto
+  margin: 0 auto;
+
+
+　
+
+
+■テーブルの線
+・border: 1px solid gray;
+
+/* 横並びにするための親要素 */
+.container {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	/* 画面の高さいっぱい */
+}
+
+/* 左側メニュー */
+.menu {
+	width: 20%;
+	background-color: #f0f8ff;
+	padding: 20px;
+}
+
+/* 右側詳細 */
+.detail {
+	width: 80%;
+	background-color: #fffaf0;
+	padding: 20px;
+}
