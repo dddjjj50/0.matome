@@ -101,6 +101,7 @@ table
 				  height: 40px;
 		}
 ・input type="submit" value="送信"　送信ボタン
+<input type="text" placeholder="うっすらテキストボックスに文字を表示させたい">
 
 
 
