@@ -108,7 +108,11 @@ table
     value属性: 各ラジオボタンの値を指定します。フォーム送信時にこの値が送られます。
     labelタグ: ラベルをクリックしてラジオボタンを選択できるようにするために使用します。
 
-
+・<select name="このプルダウンの名前">
+　　　<option value="tokyo">東京</opution>
+　　　<option value="sapporo">札幌</opution>
+　　　<option value="saitama">埼玉</opution>
+ </select>
 
 
 
