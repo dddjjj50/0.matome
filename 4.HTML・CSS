@@ -88,7 +88,7 @@ table
 
 
 ・action　入力された値をどのプログラムに渡すか。そのパス
-・method　pottか　　の2択
+・method　pott（内緒）か　get（内緒じゃない）　の2択
 ・label　それぞれの入力欄のラベリングみたいなもの。
 　<p>タグでも表示はされるけど、フォームに向けたタブが用意されてる。
 ・input type="text"/"mail"　文字の入力。labelの名前と紐づける
