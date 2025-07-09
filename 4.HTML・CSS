@@ -103,6 +103,12 @@ table
 ・input type="submit" value="送信"　送信ボタン
 <input type="text" placeholder="うっすらテキストボックスに文字を表示させたい">
 
+・ラジオボタン<input type="radio" name="option" value="option1">
+　　name属性: 同じグループのラジオボタンには同じname属性を設定します。これにより、1つだけ選択可能になります。
+    value属性: 各ラジオボタンの値を指定します。フォーム送信時にこの値が送られます。
+    labelタグ: ラベルをクリックしてラジオボタンを選択できるようにするために使用します。
+
+
 
 
 
