@@ -114,6 +114,8 @@ table
 　　　<option value="saitama">埼玉</opution>
  </select>
 
+id javascriptやCSSで対象を指定するため　ページ内で一意じゃないとだめ。
+name　フォームデータを送信するため。
 
 
 
