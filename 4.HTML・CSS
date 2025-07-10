@@ -196,3 +196,9 @@ link rel="stylesheet" type="text/css"の部分は変えなくていい
 	background-color: #fffaf0;
 	padding: 20px;
 }
+
+
+
+サーブレットかませてページ遷移するときは
+doGetのとこに
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/login.jsp"); // ←ここで指定 rd.forward(request, response); // ←画面遷移 }
