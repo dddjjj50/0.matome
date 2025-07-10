@@ -26,6 +26,11 @@
 インスタンスを格納するには「～.setAttribute()」メソッドを使う
 エクリプスでは新規→クラスから作る
 
+サーブレットからwebページが起動するようにする
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/login.jsp"); // ←ここで指定
+    rd.forward(request, response); // ←画面遷移
+}
 
 
 =======================
